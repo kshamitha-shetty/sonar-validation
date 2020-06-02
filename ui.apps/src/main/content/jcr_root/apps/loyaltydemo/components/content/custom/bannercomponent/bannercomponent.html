@@ -1,0 +1,30 @@
+<!--/*
+  Banner Component.
+*/-->
+<div data-sly-test="${wcmmode.edit}" data-emptytext="Configure Banner Component" class="cq-placeholder"></div>
+<sly data-sly-use.bannerModel="com.rnd.loyaltydemo.core.models.BannerComponentModel"/>
+
+<section class="banner-wrapper container">
+	<div class="banner hero">
+		<picture>
+			<source media="(max-width: 575px)" srcset="${properties.fileReferenceMob || properties.fileReference}">
+			<source media="(min-width: 576px) and (max-width: 991px)" srcset="${properties.fileReferenceTab || properties.fileReference}">
+			<img src="${properties.fileReference}" alt="${properties.altText}" class="" />
+		</picture>
+		<div class="container">
+			<div class="col-lg-6 col-sm-7 text-group-col-wrapper">
+				<div class="text-group-wrapper">
+					${properties.description @context='html'}
+					<sly data-sly-test="${properties.ctaLabel && properties.linkPath}">
+						<sly data-sly-test.isModalLink="${bannerModel.isPopupModalLink}">
+							<a href = "#" data-toggle="modal" data-target="${bannerModel.linkPath}">${properties.ctaLabel}</a>
+						</sly>
+						<sly data-sly-test="${!isModalLink}">
+							<a href = "${bannerModel.linkPath}" target="${properties.newWindow ? '_blank' : '_self'}">${properties.ctaLabel}</a>
+						</sly>
+					</sly>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>

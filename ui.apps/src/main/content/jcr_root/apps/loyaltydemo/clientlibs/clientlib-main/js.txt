@@ -1,0 +1,10 @@
+#base=js
+global.js
+styles.js
+
+#base=js/components
+register/register.js
+login/login.js
+forgot-username/forgot-username.js
+forgot-password/forgot-password.js
+footer/footer.js

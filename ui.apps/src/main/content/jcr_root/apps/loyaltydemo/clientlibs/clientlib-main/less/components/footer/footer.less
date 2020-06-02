@@ -1,0 +1,51 @@
+// footer-component specific styles here
+@import "../../variables/variables";
+
+.footer-component {
+	background: @footer-bg;
+	color: @footer-text-color;
+	padding: 50px 0;
+	line-height: 30px;
+}
+
+.footer-component a {
+	color: @footer-link-color;
+}
+
+.footer-component a:hover {
+	color: @footer-link-hover-color;
+}
+
+.footer-component .list {
+	list-style-type: none;
+	display: flex;
+	justify-content: flex-end;
+}
+
+.footer-component .list li {
+	padding: 0 0 0 20px;
+}
+
+.footer-component .imgLinkComponent {
+	margin-bottom: 20px;
+}
+.footer-component .left-col{
+	border-right:solid 1px @white-color;
+}
+.footer-component p{
+	margin:0px;
+}
+
+@media @mobile {
+	.footer-component .left-col{
+		border-right:none;
+	}
+	.footer-component .list {
+		list-style-type: none;
+		display: block;
+	}
+	.footer-component .list li {
+		padding: 16px 0 16px 35px;
+		border-bottom: 1px solid rgba(255, 255, 255, 0.34);
+	}
+}

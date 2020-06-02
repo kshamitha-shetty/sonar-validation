@@ -1,0 +1,19 @@
+<div data-sly-test="${wcmmode.edit}" data-emptytext="Configure Column Container Component" class="cq-placeholder"></div>
+<sly data-sly-use.userData="/apps/loyaltydemo/components/structure/userdata/userdata.js"/>
+<sly data-sly-test.visible="${wcmmode.edit || wcmmode.preview  || (properties.visibility == '2')  || ( (properties.visibility =='3') && (userData.cookieFound)) || ((properties.visibility =='4') && !(userData.cookieFound))}">
+<sly data-sly-use.columnContainerModel="com.rnd.loyaltydemo.core.models.ColumnContainerModel"></sly>
+<section class="sectionwrapper">
+	<div class="container ${columnContainerModel.containerClassStr}" style="background : ${ properties.backgroundcolor @context='styleString'}  url(${properties.fileReference  @context='styleString'})">
+		<div class="row">
+		 <div class="${properties.equalHeightColumns ? 'flexContainer' : ''}" data-sly-unwrap="${!properties.equalHeightColumns}">
+			<sly>
+				<sly data-sly-use.columnLayoutTemplate="columnparsys.html">
+                     <sly data-sly-call="${columnLayoutTemplate.columnLayout @ columnContainerModel=columnContainerModel}" ></sly>
+                  </sly>
+			</sly>
+			</div>
+		</div>
+	</div>
+</section>
+</sly>
+

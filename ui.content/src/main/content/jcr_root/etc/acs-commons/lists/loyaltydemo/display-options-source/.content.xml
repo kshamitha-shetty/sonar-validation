@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:lastModified="{Date}2020-05-24T13:44:14.792+05:30"
+        cq:lastModifiedBy="admin"
+        jcr:primaryType="nt:unstructured"
+        jcr:title="Display Options Source"
+        sling:resourceType="acs-commons/components/utilities/genericlist">
+        <image
+            jcr:primaryType="nt:unstructured"
+            fileReference="/apps/acs-commons/components/utilities/genericlist/generic-list.png"/>
+        <list jcr:primaryType="nt:unstructured">
+            <item0
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Hide"
+                value="1"/>
+            <item1
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Show"
+                value="2"/>
+            <item2
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Show in Authenticated Only"
+                value="3"/>
+            <item3
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Show in Unauthenticated Only"
+                value="4"/>
+        </list>
+    </jcr:content>
+</jcr:root>

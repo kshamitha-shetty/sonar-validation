@@ -1,0 +1,180 @@
+// register specific styles here
+@import "../../variables/variables";
+
+@register-bg:#F4F4F4;
+@register-border-color:#DDDDDD;
+@twitter-color: #00A2F9;
+@facebook-color:#3354A4;
+@input-border-label:#092958;
+@muted-text-color:#3B3B3B;
+@divider-border:#707070;
+
+.register {
+   border:solid 1px @register-border-color;
+}
+.form__bg--color{
+    background: @white-color;
+}
+.registerlogin__inner{
+    position: relative;
+    padding:105px 105px 0 105px;
+    @media @tablet-portrait {
+        padding-left:30px;
+        padding-right:30px;
+    }
+    @media @mobile {
+        padding-left:30px;
+        padding-right:30px;
+    }
+}
+.registerlogin__desc{
+    text-align: center;
+    margin-bottom: 30px;
+    h2{
+        color:@body-text-color;
+        text-transform: uppercase;
+        text-align: center;
+        margin-bottom: 30px;
+        font-weight: bold;
+    }
+}
+.registerlogin__divider{
+    margin:40px 0;
+    text-align: center;
+    font-size: @font-size-large;
+    font-weight: 600;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    &:before,
+    &:after{
+        content:" ";
+        display: inline-block;
+        border-top:solid 1px @divider-border;
+        flex: 1 0 auto;
+    }
+    &:before{
+        margin-right: 10px;
+    }
+    &:after{
+        margin-left: 10px;
+    }
+}
+.form-group{
+    margin-bottom: 30px;
+}
+.register__form .text-muted{
+    color:@muted-text-color;
+    font-size:@font-size-base;
+    margin-top: 8px;
+}
+.register__form .text-muted i{
+    font-size: @font-size-20;
+}
+.generic__form--elements label{
+    font-size: @font-size-large;
+    font-weight: 600;
+    color:@input-border-label;
+}
+.generic__form--elements input[type=text],
+.generic__form--elements input[type=email],
+.generic__form--elements input[type=password]{
+    height:50px;
+    border-radius:0;
+    border:solid 1px @input-border-label;
+}
+.generic__form--elements .error{
+    color:@error-text-color;
+    font-size: @font-size-base;
+    margin-top:10px;
+    margin-bottom: 0;
+}
+.generic__form--elements .form-control.error{
+    border:solid 1px @error-text-color;
+}
+.generic__login__signup a{
+    font-weight: bold;
+}
+.registerlogin__social{
+    text-align: center;
+}
+.registerlogin__social .facebook,
+.registerlogin__social .twitter{
+    color: @white-color;
+    width:100%;
+    margin-bottom:20px;
+    padding: 17px;
+    font-weight: 600;
+    display: flex;
+    justify-content: center;
+}
+.registerlogin__social .facebook i,
+.registerlogin__social .twitter i {
+    font-size: 22px;
+    margin-right:10px;
+}
+.registerlogin__social .facebook{
+    background: @facebook-color;
+}
+.registerlogin__social .twitter{
+    background:@twitter-color;
+}
+.generic__login__signup{
+    margin-top:50px;
+    text-align: center;
+    font-size: @font-size-large;
+    font-weight: 600;
+    padding: 50px 0;
+    border-top: 1px solid @divider-border;
+    @mobile{
+        font-size:@font-size-large;
+    }
+}
+
+.generic__login__signupbtn button{
+    width:100%;
+    padding: 18px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+.register__success{
+    max-width: 650px;
+    padding: 30px;
+    margin:0 auto;
+}
+.register__successmsg{
+    font-size: @font-size-medium;
+    margin-bottom: 30px;
+    text-align: center;
+    
+    p{
+        line-height: 30px;;
+    }
+}
+.generic__error{
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    top:0px;
+}
+.generic__error__inner{
+    max-width: 83%;
+    display: flex;
+    margin: 0 auto;
+    padding:10px 0;
+    background:@error-bg-color;
+    color:@black-color;
+    justify-content: center;
+
+    .fa-exclamation{
+        width: 28px;
+        height: 28px;
+        border: solid 2px @error-border-color;
+        border-radius: 50%;
+        margin-right: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color:@error-text-color;
+    }
+}

@@ -1,0 +1,353 @@
+@import "./variables/variables";
+
+*{
+	margin: 0px;
+	padding: 0px;
+	border: none;
+	box-sizing: border-box;
+}
+h1,h2,h3,h4,h5,h6,p{
+	margin: 0px;
+	padding: 0px;
+	border: none;
+}
+
+@font-face {
+	font-family: 'FontAwesome';
+	src: url('../resources/fonts/font-awesome/fontawesome-webfont.woff2') format('woff2'),
+	url('../resources/fonts/font-awesome/fontawesome-webfont.woff?v=4.7.0') format('woff'), 
+	url('../resources/fonts/font-awesome/fontawesome-webfont.ttf?v=4.7.0') format('truetype');
+	font-weight: normal;
+	font-style: normal
+}
+
+@font-face {
+    font-family: 'Montserrat';
+	src: url('../resources/fonts/montserrat/Montserrat-Regular.woff2') format('woff2'), 
+	url('../resources/fonts/montserrat/Montserrat-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Montserrat';
+	src: url('../resources/fonts/montserrat/Montserrat-Light.woff2') format('woff2'), 
+	url('../resources/fonts/montserrat/Montserrat-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Montserrat';
+	src: url('../resources/fonts/montserrat/Montserrat-SemiBold.woff2') format('woff2'), 
+	url('../resources/fonts/montserrat/Montserrat-SemiBold.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Montserrat';
+	src: url('../resources/fonts/montserrat/Montserrat-Medium.woff2') format('woff2'), 
+	url('../resources/fonts/montserrat/Montserrat-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Montserrat';
+	src: url('../resources/fonts/montserrat/Montserrat-Bold.woff2') format('woff2'), 
+	url('../resources/fonts/montserrat/Montserrat-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+
+
+body {
+	font-family: @font-family-base;
+	font-size: @font-size-base;
+}
+
+.container {
+	max-width: @container-width;
+}
+
+/*---------- 
+alignment utility - 
+horizontal left right center and 
+vertical top bottom center -------*/
+.align-h-right-d, .align-h-center-d, .align-h-left-d, .align-v-top-d, .align-v-center-d, .align-v-bottom-d {
+	display: flex;
+}
+
+.align-h-right-d {
+	justify-content: flex-end;
+}
+
+.align-h-center-d {
+	justify-content: center;
+}
+
+.align-h-left-d {
+	justify-content: flex-start;
+}
+
+.align-v-top-d {
+	align-items: flex-start;
+}
+
+.align-v-center-d {
+	align-items: center;
+}
+
+.align-v-bottom-d {
+	align-items: flex-end;
+}
+
+.align-right-d {
+	text-align: right;
+}
+
+.align-left-d {
+	text-align: left;
+}
+
+.align-center-d {
+	text-align: center;
+}
+
+.no-padding-d{
+	padding:0px;
+}
+.no-margin-d{
+	margin:0px;
+}
+// padding top and bottom for desktop and mobile
+// padding-top for desktop
+.ptd-10{
+padding-top: 10px;
+}
+// padding-bottom for desktop
+.pbd-10{
+	padding-bottom: 10px;
+}
+.ptd-20{
+	padding-top: 20px;
+}
+.pbd-20{
+	padding-bottom: 20px;
+}
+.ptd-30{
+	padding-top: 30px;
+}
+.pbd-30{
+	padding-bottom: 30px;
+}
+.ptd-40{
+	padding-top: 40px;
+}
+.pbd-40{
+	padding-bottom: 40px;
+}
+.ptd-50{
+	padding-top: 50px;
+}
+.pbd-50{
+	padding-bottom: 50px;
+}
+
+
+ @media @mobile {
+	.no-padding-m{
+		padding:0px;
+	}
+	.no-margin-m{
+		margin:0px;
+	}
+	.align-h-right-m, .align-h-center-m, .align-h-left-m, .align-v-top-m, .align-v-center-m, .align-v-bottom-m {
+		display: flex;
+	}
+	
+	.align-h-right-m {
+		justify-content: flex-end;
+	}
+	
+	.align-h-center-m {
+		justify-content: center;
+	}
+	
+	.align-h-left-m {
+		justify-content: flex-start;
+	}
+	
+	.align-v-top-m {
+		align-items: flex-start;
+	}
+	
+	.align-v-center-m {
+		align-items: center;
+	}
+	
+	.align-v-bottom-m {
+		align-items: flex-end;
+	}
+	
+	.align-right-m {
+		text-align: right;
+	}
+	
+	.align-left-m {
+		text-align: left;
+	}
+	
+	.align-center-m {
+		text-align: center;
+	}
+
+	// padding-top for mobile
+	.ptm-10{
+		padding-top: 10px;
+	}
+	// padding-bottom for mobile
+	.pbm-10{
+		padding-bottom: 10px;
+	}
+	.ptm-20{
+		padding-top: 20px;
+	}
+	.pbm-20{
+		padding-bottom: 20px;
+	}
+	.ptm-30{
+		padding-top: 30px;
+	}
+	.pbm-30{
+		padding-bottom: 30px;
+	}
+	.ptm-40{
+		padding-top: 40px;
+	}
+	.pbm-40{
+		padding-bottom:40px;
+	}
+	.ptm-50{
+		padding-top: 50px;
+	}
+	.pbm-50{
+		padding-bottom: 50px;
+	}
+}
+
+
+// hide show utility
+.hidden-md,
+.hidden-xs,
+.hidden-lg{
+	display: none;
+}
+@media @desktop{
+	.visible-md,
+	.visible-xs{
+		display:none;
+	}
+	.visible-lg{
+		display: block;
+	}
+	
+}
+@media @tablet-portrait {
+	.visible-lg,
+	.visible-xs{
+		display:none;
+	}
+	.visible-md{
+		display: block;
+	}
+
+}
+@media @mobile {
+	.visible-lg,
+	.visible-md{
+		display:none;
+	}
+	.visible-xs{
+		display: block;
+	}
+}
+
+
+// primary button style
+.btn-primary{
+	background:@primary-btn-bg;
+	color:@primary-btn-color;
+	border: @primary-btn-border;
+	border-radius:@primary-btn-border-radius;
+}
+.btn-primary:hover{
+	background:@primary-btn-hover-bg;
+	color:@primary-btn-hover-color;
+	border:@primary-btn-hover-border;
+	opacity: 0.5;
+}
+
+.btn-primary.focus, 
+.btn-primary:focus,
+.btn-primary.active, 
+.btn-primary:active,
+.btn-primary:not(:disabled):not(.disabled):active{
+	background:@primary-btn-bg;
+	color:@primary-btn-color;
+	border: @primary-btn-border;
+	border-radius:@primary-btn-border-radius;
+	box-shadow: none;
+}
+
+// secondary button style
+.btn-secondary{
+	background:@secondary-btn-bg;
+	color:@secondary-btn-color;
+	border: solid 1px @secondary-btn-border;
+	border-radius:@secondary-btn-border-radius;
+}
+.btn-secondary:hover{
+	background:@secondary-btn-hover-bg;
+	color:@secondary-btn-hover-color;
+	border:solid 1px @secondary-btn-hover-border;
+}
+
+.btn-secondary.focus, 
+.btn-secondary:focus,
+.btn-secondary.active, 
+.btn-secondary:active,
+.btn-secondary:not(:disabled):not(.disabled):active{
+	background:@secondary-btn-bg;
+	color:@secondary-btn-color;
+	border: @secondary-btn-border;
+	border-radius:@secondary-btn-border-radius;
+	box-shadow: none;
+}
+
+a{
+	color:@link-color;
+}
+a:hover{
+	color:@link-color;
+}
+
+// header tag style
+h1{
+	font-size:@h1-size;
+}
+h2{
+	font-size:@h2-size;
+}
+h3{
+	font-size:@h3-size;
+}
+h4{
+	font-size:@h4-size;
+}
+h5{
+	font-size:@h5-size;
+}
+h6{
+	font-size:@h6-size;
+}

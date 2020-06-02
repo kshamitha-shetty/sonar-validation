@@ -1,0 +1,17 @@
+<div data-sly-test="${wcmmode.edit}" data-emptytext="Configure Experience Fragment Component" class="cq-placeholder"></div>
+
+<sly data-sly-test="${properties.fragmentVariation=='genericBasedFragment'}">
+
+
+<sly data-sly-resource="${properties.genericFragment @ wcmmode='disabled'}/jcr:content/root"></sly>
+</sly>
+
+<sly data-sly-test="${properties.fragmentVariation=='authBasedFragment'}">
+
+
+<sly data-sly-use.checkAuth="/apps/loyaltydemo/components/structure/userdata/userdata.js"/>
+
+<sly data-sly-test.fragmentPath="${(checkAuth.cookieFound) ? properties.authFragment : properties.anonymousFragment}">
+
+<sly data-sly-test="${fragmentPath}" data-sly-resource="${fragmentPath @ wcmmode='disabled'}/jcr:content/root"></sly> 
+</sly>

@@ -1,0 +1,24 @@
+<div data-sly-test="${wcmmode.edit}" data-emptytext="Configure Footer Component" class="cq-placeholder"></div>
+<sly data-sly-use.footerModel="com.rnd.loyaltydemo.core.models.FooterModel">
+    <section class="footer-component">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 col-lg-12 align-right no-padding-m" data-sly-test.footerList="${footerModel.labellinks}">
+                    <ul class="list" data-sly-list="${footerList}">
+                        <li><a href="${item.link}" target="${item.newWindow ? '_blank' : '_self'}">${item.label}</a></li>
+                </ul>
+                </div>
+                <div class="col-md-3 col-lg-3 align-v-center-d align-h-center-m align-center-m left-col"
+                     data-sly-test="${footerModel.optionalText}">
+                    ${footerModel.optionalText @context='html'}
+                </div>
+                <div class="col-md-9 col-md-9 align-right-d align-center-m ptd-40">
+                    <div class="imgLinkComponent" data-sly-test="${footerModel.logoUrl}">
+                        <img src="${footerModel.logoUrl}" alt="${footerModel.altText}">
+                    </div>
+                    <p data-sly-test="${footerModel.copyright}">${footerModel.copyright @context='html'}</p>
+                </div>
+            </div>
+        </div>
+    </section>
+</sly>

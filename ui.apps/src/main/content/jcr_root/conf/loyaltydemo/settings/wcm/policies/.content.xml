@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:rep="internal"
+    jcr:mixinTypes="[rep:AccessControllable]"
+    jcr:primaryType="cq:Page">
+    <wcm jcr:primaryType="nt:unstructured">
+        <foundation jcr:primaryType="nt:unstructured">
+            <components jcr:primaryType="nt:unstructured">
+                <responsivegrid jcr:primaryType="nt:unstructured">
+                    <policy_718249650314828
+                        jcr:lastModified="{Date}2020-04-28T15:12:54.250+05:30"
+                        jcr:lastModifiedBy="admin"
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="EPC Loyalty Demo Page Policy"
+                        sling:resourceType="wcm/core/components/policy/policy"
+                        components="[group:Loyalty Demo,group:Loyalty Demo Core]">
+                        <jcr:content jcr:primaryType="nt:unstructured"/>
+                    </policy_718249650314828>
+                    <policy_720003409462071
+                        jcr:lastModified="{Date}2020-04-28T15:30:15.524+05:30"
+                        jcr:lastModifiedBy="admin"
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="EPC Loyalty Demo Experience Fragment Policy"
+                        sling:resourceType="wcm/core/components/policy/policy"
+                        components="[group:Loyalty Demo,group:Loyalty Demo Core]">
+                        <jcr:content jcr:primaryType="nt:unstructured"/>
+                    </policy_720003409462071>
+                </responsivegrid>
+            </components>
+        </foundation>
+    </wcm>
+    <loyaltydemo jcr:primaryType="nt:unstructured">
+        <components jcr:primaryType="nt:unstructured">
+            <form jcr:primaryType="nt:unstructured">
+                <container jcr:primaryType="nt:unstructured">
+                    <form-container
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="loyaltydemo Form"
+                        sling:resourceType="wcm/core/components/policy/policy"
+                        components="[/apps/loyaltydemo/components/form/button,/apps/loyaltydemo/components/form/hidden,/apps/loyaltydemo/components/form/options,/apps/loyaltydemo/components/form/text]">
+                        <jcr:content jcr:primaryType="nt:unstructured"/>
+                    </form-container>
+                </container>
+            </form>
+        </components>
+    </loyaltydemo>
+    <foundation jcr:primaryType="nt:unstructured">
+        <components jcr:primaryType="nt:unstructured">
+            <iparsys jcr:primaryType="nt:unstructured">
+                <policy_1588066237800
+                    jcr:lastModified="{Date}2020-04-28T15:10:22.092+05:30"
+                    jcr:lastModifiedBy="admin"
+                    jcr:primaryType="nt:unstructured"
+                    jcr:title="Loyalty Demo Header Iparsys Policy"
+                    sling:resourceType="wcm/core/components/policy/policy"
+                    components="group:Loyalty Demo">
+                    <jcr:content jcr:primaryType="nt:unstructured"/>
+                    <section jcr:primaryType="nt:unstructured"/>
+                </policy_1588066237800>
+                <policy_719123988401628
+                    jcr:lastModified="{Date}2020-04-28T15:18:01.150+05:30"
+                    jcr:lastModifiedBy="admin"
+                    jcr:primaryType="nt:unstructured"
+                    jcr:title="Loyalty Demo Footer Content Policy"
+                    sling:resourceType="wcm/core/components/policy/policy"
+                    components="group:Loyalty Demo">
+                    <jcr:content jcr:primaryType="nt:unstructured"/>
+                    <section jcr:primaryType="nt:unstructured"/>
+                </policy_719123988401628>
+            </iparsys>
+        </components>
+    </foundation>
+</jcr:root>
