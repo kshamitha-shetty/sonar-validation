@@ -27,7 +27,8 @@ pipeline {
                     }
                 }
             }
-        }stage('Sonar Analysis') {
+        }
+		stage('Sonar Analysis') {
 		    steps{
 					script{
 						withSonarQubeEnv('sonarqualitygate') {
