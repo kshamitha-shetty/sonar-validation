@@ -30,12 +30,15 @@ pipeline {
         }
 
 }
-stage('SonarQube analysis') {
-          steps {
-withSonarQubeEnv(credentialsId: 'sonar') {
+stage('Upload Artifacts to Nexus') {
+		    
+				steps{
+					script{
+						withSonarQubeEnv(credentialsId: 'sonar') {
                  sh 'mvn clean package sonar:sonar'
-              }
-          }
-      }
+						}
+					}
+				}	
 
+}
 }
