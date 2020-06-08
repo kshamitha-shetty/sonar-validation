@@ -27,18 +27,18 @@ pipeline {
                     }
                 }
             }
-        }
-
-}
-stage('Upload Artifacts to Nexus') {
-		    
-				steps{
+        }stage('Sonar Analysis') {
+		    steps{
 					script{
-						withSonarQubeEnv(credentialsId: 'sonar') {
+						withSonarQubeEnv('sonarqualitygate') {
                  sh 'mvn clean package sonar:sonar'
 						}
 					}
 				}	
 
 }
+		
+
+}
+
 }
