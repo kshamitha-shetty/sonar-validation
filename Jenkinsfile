@@ -29,5 +29,8 @@ pipeline {
             }
         }
 
+<<<<<<< HEAD
 }
+=======
+>>>>>>> ef0db14a8759dafd6d518cbd9d3b69c3291b4979
 }
