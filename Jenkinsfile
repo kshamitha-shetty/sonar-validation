@@ -30,8 +30,8 @@ pipeline {
         }
 
 }
-stage("build & SonarQube analysis") {
-          node {
+stage('SonarQube analysis') {
+          steps {
 withSonarQubeEnv(credentialsId: 'sonar') {
                  sh 'mvn clean package sonar:sonar'
               }
