@@ -16,6 +16,7 @@ pipeline {
 		stage('Sonarqube') {
     environment {
         scannerHome = tool 'SonarQubeScanner'
+		echo $scannerHome
     }
     steps {
         withSonarQubeEnv(credentialsId: 'loyltydemo', installationName: 'sonarqualitygate'){
