@@ -15,6 +15,7 @@ pipeline {
         }
 		stage('Build and Test') {
             steps {
+                //input ('Do you want to proceed?')
                 script {
                     try {
                         sh 'mvn clean package' 
@@ -35,12 +36,11 @@ pipeline {
             sh "${scannerHome}/bin/sonar-scanner"
         }
         timeout(time: 10, unit: 'MINUTES') {
-		    mail to: 'kshamitha@epsilonconversant.com',
-            subject: "Status of Sonar Analysis",
             waitForQualityGate abortPipeline: true
 			mail to: 'kshamitha@epsilonconversant.com',
             subject: "Status of Sonar Analysis",
-			body:"Sonar Analysis is Success"
+            body: "Sonar Analysis Is Success"
+			
         }
     }
 }
