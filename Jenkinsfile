@@ -38,7 +38,7 @@ pipeline {
         timeout(time: 10, unit: 'MINUTES') {
 		    mail to: 'kshamitha@epsilonconversant.com',
             subject: "Status of Sonar Analysis",
-            body: "Job ${currentBuild.result}}"
+            body: "Job ${waitForQualityGate.status}}"
             waitForQualityGate abortPipeline: true
 			mail to: 'kshamitha@epsilonconversant.com',
             subject: "Status of Sonar Analysis",
