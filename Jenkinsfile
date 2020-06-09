@@ -39,7 +39,7 @@ pipeline {
 		def qg = waitForQualityGate()
 		    mail to: 'kshamitha@epsilonconversant.com',
             subject: "Status of Sonar Analysis",
-            body: "$${qg.status}"
+            body: "${qg.status}"
             waitForQualityGate abortPipeline: true
 			mail to: 'kshamitha@epsilonconversant.com',
             subject: "Status of Sonar Analysis",
