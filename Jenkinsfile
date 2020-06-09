@@ -31,7 +31,7 @@ pipeline {
 		stage('Sonar Analysis') {
 		    steps{
 					script{
-						withSonarQubeEnv('sonarqualitygatenew') {
+						withSonarQubeEnv('sonarqualitygate') {
                  sh 'mvn clean package sonar:sonar'
 						}
 					}
