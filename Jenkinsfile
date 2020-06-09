@@ -38,7 +38,7 @@ pipeline {
 		    mail to: 'kshamitha@epsilonconversant.com',
             subject: "Status of Sonar Analysis",
             waitForQualityGate abortPipeline: true
-			  mail to: 'kshamitha@epsilonconversant.com',
+			mail to: 'kshamitha@epsilonconversant.com',
             subject: "Status of Sonar Analysis",
 			body:"Sonar Analysis is Success"
         }
