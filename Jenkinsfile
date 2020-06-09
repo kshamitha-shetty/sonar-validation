@@ -31,7 +31,7 @@ pipeline {
 		stage('Sonar Analysis') {
 		    steps{
 					script{
-						withSonarQubeEnv(credentialsId: '116aafd4baeeadda5954339b33ba48b5fef5045b', installationName: 'sonarqualitygate') {
+						withSonarQubeEnv(credentialsId: 'loyltydemo', installationName: 'sonarqualitygate') {
                  sh 'mvn clean package sonar:sonar'
 						}
 					}
