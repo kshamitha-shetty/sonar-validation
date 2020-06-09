@@ -36,6 +36,9 @@ pipeline {
             sh "${scannerHome}/bin/sonar-scanner"
         }
         timeout(time: 10, unit: 'MINUTES') {
+		    mail to: 'kshamitha@epsilonconversant.com',
+            subject: "Status of Sonar Analysis",
+            body: "Job ${currentBuild.result}}"
             waitForQualityGate abortPipeline: true
 			mail to: 'kshamitha@epsilonconversant.com',
             subject: "Status of Sonar Analysis",
